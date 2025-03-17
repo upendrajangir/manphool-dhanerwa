@@ -1,0 +1,8 @@
+/* main.css */
+/* Importing all CSS modules */
+@import url("variables.css");
+@import url("reset.css");
+@import url("base.css");
+@import url("layout.css");
+@import url("components.css");
+@import url("sections.css");

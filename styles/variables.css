@@ -1,0 +1,10 @@
+/* variables.css */
+:root {
+    --primary-color: #2E7D32; /* Dark Green */
+    --accent-color: #FBC02D;  /* Accent Gold */
+    --bg-color: #F4F4F4;
+    --text-color: #333;
+    --white: #fff;
+    --transition-speed: 0.3s;
+  }
+  
