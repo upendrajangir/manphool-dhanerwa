@@ -1,8 +1,7 @@
-/* About Section with Full-Image Bottom Overlay */
-
+/* About Section with Full-Page Background and Overlay */
 .about-overlay-container {
   position: relative;
-  height: 80vh; /* Adjust height as needed */
+  height: 100vh; /* Full viewport height */
   overflow: hidden;
 }
 
@@ -11,40 +10,38 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: grayscale(100%); /* Keeps the image black & white */
+  filter: grayscale(100%);
 }
 
-/* Create an overlay over the bottom half of the image */
+/* Apply a full overlay over the bottom of the image (optional: you may adjust the gradient as needed) */
 .about-overlay-container::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  top: 50%; /* Covers bottom half */
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
   pointer-events: none;
 }
 
-/* Position text over the overlay */
 .about-text-overlay {
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  color: #fff;  /* Pure white text for better contrast */
+  color: var(--white);
   padding: 0 20px;
   width: 100%;
   max-width: 800px;
-  /* Add a subtle text shadow for enhanced readability */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .about-text-overlay h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  font-weight: 700; /* More dynamic weight */
+  font-weight: 700;
 }
 
 .about-text-overlay p {
@@ -53,11 +50,8 @@
   font-weight: 500;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive Adjustments for Mobile */
 @media (max-width: 768px) {
-  .about-overlay-container {
-    height: 60vh;
-  }
   .about-text-overlay h2 {
     font-size: 2rem;
   }

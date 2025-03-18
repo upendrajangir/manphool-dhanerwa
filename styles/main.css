@@ -1,5 +1,15 @@
 /* main.css */
-/* Importing all CSS modules */
+
+/* Foundational Styles */
+@import url("variables.css");
+@import url("reset.css");
+@import url("base.css");
+
+/* Layout and Global Components */
+@import url("layout.css");
+@import url("components.css");
+
+/* Page-Specific Modules */
 @import url("header.css");
 @import url("mobile-nav.css");
 @import url("hero.css");
@@ -8,9 +18,4 @@
 @import url("pricing.css");
 @import url("gallery.css");
 @import url("contact.css");
-@import url("variables.css");
-@import url("reset.css");
-@import url("base.css");
-@import url("layout.css");
-@import url("components.css");
 @import url("footer.css");

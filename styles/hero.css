@@ -1,8 +1,7 @@
 /* Hero Section with Video Background */
 .hero-section {
   position: relative;
-  /* Height will be set dynamically via JS */
-  height: calc(100vh - 80px); /* Fallback: assume header is 80px */
+  height: 100vh; /* Full viewport height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,10 +61,6 @@
 
 /* Responsive Adjustments for Mobile */
 @media (max-width: 768px) {
-  .hero-section {
-    /* Height will be set dynamically as well */
-    height: calc(100vh - 60px); /* fallback if header is smaller on mobile */
-  }
   .hero-content h2 {
     font-size: 2rem;
   }
