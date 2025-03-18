@@ -1,7 +1,7 @@
 document.addEventListener('componentsLoaded', function() {
-  // Mobile menu toggle
-  const mobileMenuToggle = document.querySelector('.mobile-toggle'); // Updated selector
-  const mobileNav = document.querySelector('.modern-nav'); // Updated to match header's nav class
+  // ===== Mobile Menu Toggle =====
+  const mobileMenuToggle = document.querySelector('.mobile-toggle'); // Correct selector in header.html
+  const mobileNav = document.querySelector('.modern-nav'); // Header navigation for mobile
 
   if (mobileMenuToggle && mobileNav) {
     mobileMenuToggle.addEventListener('click', () => {
@@ -11,7 +11,7 @@ document.addEventListener('componentsLoaded', function() {
     console.error('Mobile menu toggle or mobile nav not found.');
   }
 
-  // Smooth scrolling for all anchor links
+  // ===== Smooth Scrolling for Anchor Links =====
   const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
   smoothScrollLinks.forEach(link => {
     link.addEventListener('click', function(e) {
@@ -30,7 +30,7 @@ document.addEventListener('componentsLoaded', function() {
     });
   });
 
-  // Intersection Observer for reveal animations on sections
+  // ===== Intersection Observer for Section Reveal Animations =====
   const observerOptions = { threshold: 0.2 };
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -42,4 +42,22 @@ document.addEventListener('componentsLoaded', function() {
 
   const sections = document.querySelectorAll('.section');
   sections.forEach(section => observer.observe(section));
+
+  // ===== Intersection Observer for Gallery Items Animation =====
+  // This part is optional if gallery items have their own animation trigger
+  const galleryItems = document.querySelectorAll('.masonry-gallery img, .masonry-gallery video');
+  const galleryObserverOptions = { threshold: 0.2 };
+
+  const galleryObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        obs.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, galleryObserverOptions);
+
+  galleryItems.forEach(item => {
+    galleryObserver.observe(item);
+  });
 });

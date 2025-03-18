@@ -1,0 +1,53 @@
+/* Gallery Section Styles */
+.gallery-section {
+    padding: 80px 20px;
+    background: #fff;
+  }
+  
+  .gallery-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .masonry-gallery {
+    column-count: 3;
+    column-gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Gallery items start hidden and slide up */
+  .masonry-gallery img,
+  .masonry-gallery video {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: block;
+    break-inside: avoid;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  /* When in view, reveal the item */
+  .masonry-gallery img.in-view,
+  .masonry-gallery video.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .masonry-gallery {
+      column-count: 2;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .masonry-gallery {
+      column-count: 1;
+    }
+  }
+  
