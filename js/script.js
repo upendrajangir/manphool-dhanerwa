@@ -1,8 +1,8 @@
 document.addEventListener('componentsLoaded', function() {
   // Mobile menu toggle
-  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-  const mobileNav = document.querySelector('.mobile-nav');
-  
+  const mobileMenuToggle = document.querySelector('.mobile-toggle'); // Updated selector
+  const mobileNav = document.querySelector('.modern-nav'); // Updated to match header's nav class
+
   if (mobileMenuToggle && mobileNav) {
     mobileMenuToggle.addEventListener('click', () => {
       mobileNav.classList.toggle('active');

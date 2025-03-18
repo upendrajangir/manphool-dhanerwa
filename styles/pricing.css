@@ -1,0 +1,74 @@
+/* Pricing Section Styles */
+.pricing-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f9f9f9;
+  }
+  
+  .pricing-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .pricing-card {
+    background: #fff;
+    border: 2px solid #FBC02D; /* Using accent color; adjust if needed */
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .pricing-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .pricing-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #2e7d32;
+  }
+  
+  .pricing-card .price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .pricing-card .offer {
+    font-size: 0.95rem;
+    color: #d32f2f;  /* Red color for offers */
+    margin-top: 10px;
+  }
+  
+  /* Special offer styling */
+  .special-offer {
+    border-color: #d32f2f;
+    background-color: #ffe6e6;  /* light red background */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .pricing-section h2 {
+      font-size: 2rem;
+    }
+    .pricing-card h3 {
+      font-size: 1.2rem;
+    }
+    .pricing-card .price {
+      font-size: 1.1rem;
+    }
+    .pricing-card .offer {
+      font-size: 0.9rem;
+    }
+  }
+  

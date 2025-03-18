@@ -2,6 +2,8 @@
 /* Importing all CSS modules */
 @import url("header.css");
 @import url("about.css");
+@import url("services.css");
+@import url("pricing.css");
 @import url("variables.css");
 @import url("reset.css");
 @import url("base.css");
