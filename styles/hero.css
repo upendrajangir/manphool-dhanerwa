@@ -1,87 +1,79 @@
 /* Hero Section with Video Background */
 .hero-section {
-    position: relative;
-    height: 70vh; /* Reduced from 100vh */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  position: relative;
+  /* Height will be set dynamically via JS */
+  height: calc(100vh - 80px); /* Fallback: assume header is 80px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: var(--white);
+  padding: 20px;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn {
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    /* Height will be set dynamically as well */
+    height: calc(100vh - 60px); /* fallback if header is smaller on mobile */
   }
-  
-  .hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: -2;
-    object-fit: cover;
-    filter: brightness(0.7);
-  }
-  
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: -1;
-  }
-  
-  .hero-content {
-    position: relative;
-    text-align: center;
-    color: var(--white);
-    padding: 20px;
-    max-width: 800px;
-    z-index: 1;
-  }
-  
   .hero-content h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
   }
-  
   .hero-content p {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
+    font-size: 1rem;
   }
-  
   .hero-content .btn {
-    font-size: 1.1rem;
-    padding: 12px 24px;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background 0.3s ease;
+    font-size: 1rem;
+    padding: 10px 20px;
   }
-  
-  /* Responsive Adjustments for Mobile */
-  @media (max-width: 768px) {
-    .hero-section {
-      height: 70vh; /* Consistent height on mobile; adjust if needed */
-    }
-    
-    .hero-video {
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-    }
-    
-    .hero-content h2 {
-      font-size: 2rem;
-    }
-    
-    .hero-content p {
-      font-size: 1rem;
-    }
-    
-    .hero-content .btn {
-      font-size: 1rem;
-      padding: 10px 20px;
-    }
-  }
-  
+}
