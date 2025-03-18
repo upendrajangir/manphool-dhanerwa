@@ -1,6 +1,7 @@
 /* main.css */
 /* Importing all CSS modules */
 @import url("header.css");
+@import url("about.css");
 @import url("variables.css");
 @import url("reset.css");
 @import url("base.css");
