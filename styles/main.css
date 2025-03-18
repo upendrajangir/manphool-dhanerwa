@@ -1,6 +1,7 @@
 /* main.css */
 /* Importing all CSS modules */
 @import url("header.css");
+@import url("mobile-nav.css");
 @import url("about.css");
 @import url("services.css");
 @import url("pricing.css");

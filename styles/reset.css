@@ -1,11 +1,69 @@
-/* reset.css */
-* {
+/* reset.css - Mobile-Optimized Reset and Normalize */
+
+/* Apply a natural box-sizing model for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+/* Set base font-size and prevent unwanted text adjustments on mobile */
+html {
+  font-size: 100%; /* Default is 16px, adjust if needed for mobile scaling */
+  -webkit-text-size-adjust: 100%; /* Prevent iOS from resizing text */
+}
+
+/* Set a consistent body style */
+body {
+  line-height: 1.5;
   font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Normalize link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset form elements for consistency */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+}
+
+/* Make images and videos responsive */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Remove default margins from headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }

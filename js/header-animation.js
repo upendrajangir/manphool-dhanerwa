@@ -1,8 +1,26 @@
 document.addEventListener("componentsLoaded", () => {
   const header = document.querySelector(".modern-header");
   const navPills = document.querySelectorAll(".nav-pill");
-  const mobileToggle = document.querySelector(".mobile-toggle");
+  const mobileToggle = document.querySelector('.mobile-toggle');
 
+  // Set up mobile menu toggle using mobile-nav overlay
+  const mobileNavContainer = document.querySelector('#mobile-nav'); // Container where mobile-nav.html is injected
+  const mobileNav = mobileNavContainer ? mobileNavContainer.querySelector('.mobile-nav') : null;
+  
+  if (mobileToggle && mobileNav) {
+    mobileToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      // Toggle icon between hamburger and close (X)
+      if (mobileNav.classList.contains('active')) {
+        mobileToggle.innerHTML = `<i class="fas fa-times"></i>`;
+      } else {
+        mobileToggle.innerHTML = `<i class="fas fa-bars"></i>`;
+      }
+    });
+  } else {
+    console.error('Mobile toggle or mobile nav not found.');
+  }
+  
   // Only proceed if header exists
   if (header) {
     // Add initial animation class on load
@@ -25,16 +43,6 @@ document.addEventListener("componentsLoaded", () => {
         navPills.forEach(item => item.classList.remove("selected"));
         e.currentTarget.classList.add("selected");
       });
-    });
-  }
-
-  // Set up mobile menu toggle if it exists
-  if (mobileToggle) {
-    mobileToggle.addEventListener("click", () => {
-      const mobileNav = document.querySelector(".modern-nav");
-      if (mobileNav) {
-        mobileNav.classList.toggle("active");
-      }
     });
   }
 });

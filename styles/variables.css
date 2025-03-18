@@ -1,10 +1,23 @@
-/* variables.css */
 :root {
-    --primary-color: #2E7D32; /* Dark Green */
-    --accent-color: #FBC02D;  /* Accent Gold */
-    --bg-color: #F4F4F4;
-    --text-color: #333;
-    --white: #fff;
-    --transition-speed: 0.3s;
-  }
+  /* Colors */
+  --primary-color: #2E7D32; /* Dark Green */
+  --accent-color: #FBC02D;  /* Accent Gold */
+  --bg-color: #F4F4F4;
+  --text-color: #333;
+  --white: #fff;
   
+  /* Transition */
+  --transition-speed: 0.3s;
+  
+  /* Typography */
+  --font-family-base: 'Poppins', sans-serif;
+  --base-font-size: 16px;
+  --heading-font-weight: 600;
+  --body-font-weight: 400;
+  
+  /* Breakpoints */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
